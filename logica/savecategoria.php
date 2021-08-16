@@ -16,15 +16,12 @@ if (isset($_POST['newCategoria'])) {
             die("Error 1: Error de query ");
         } else {
             echo "Categoria insertado<br>";
-            
             $_SESSION['mensaje'] = "Categoria \" $nombre_categoria \" agregado 😃";
             $_SESSION['colorcito'] = "success";
             header("Location: ../Admin/categoria.php");
         }
     }
 }
-
-
 
 // MODIFICAR CATEGORIA
 if (isset($_POST['modCategoria'])) {
@@ -69,8 +66,6 @@ if(isset($_GET['idcategoria'])){
         $_SESSION['colorcito'] = "danger";
         header("Location: ../Admin/categoria.php");
     } 
-
-
 }
 ?>
 

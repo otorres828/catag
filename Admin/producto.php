@@ -10,10 +10,12 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Datatables -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
     <title>Catag - Producto</title>
 
@@ -40,7 +42,7 @@
                 <div class="col">
                     <div class="mb-3 mt-4">
                         <label for="exampleInputEmail1" class="form-label">Link personalizado</label>
-                        <input type="link" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="http://catag.epizy.com/Catag/shop.php?username=<?=$p['username'];?>">
+                        <input type="link" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="http://localhost/cat/Admin/tienda.php?username=<?=$p['username'];?>">
                         <div id="emailHelp" class="form-text">Comparte tu link</div>
                     </div>
 

@@ -20,8 +20,13 @@ $resultado = $conn->query($query);
     <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    
     <title>Catag - Nuevo producto</title>
 </head>
 
@@ -82,5 +87,8 @@ $resultado = $conn->query($query);
 
         </div>
     </div>
+
+    <?php include '../cabeceras/footer.php';?>
+
 </body>
 </html>

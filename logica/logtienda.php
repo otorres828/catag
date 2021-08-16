@@ -1,9 +1,6 @@
 <?php
 include '../database/db.php';
 
-if (!isset($_GET['username'])) {
-    header("Location: ../login.php");
-}
 if (isset($_GET['username'])) {
     $username = $_GET['username'];
     $q1 = "SELECT * FROM usuario WHERE username='$username'";

@@ -8,12 +8,17 @@ if (!empty($_POST['correo']) && !empty($_POST['clave'])) {
     $records->bindParam(':correo', $_POST['correo']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
-
-    if (count($results) > 0 && password_verify($_POST['clave'], $results['clave'])) {
-        $_SESSION['user_id'] = $results['id'];
-        $_SESSION['username']=  $results['username'];
-        header("Location: Admin/producto.php");
-    } else {
+    if($results>0){
+        $cla=password_verify($_POST['clave'], $results['clave']);
+        if($cla>0){
+            $_SESSION['user_id'] = $results['id'];
+            $_SESSION['username']=  $results['username'];
+            header("Location: Admin/producto.php");
+        }else{
+            $_SESSION['mensaje'] = "DATOS ERRONEOS ";
+            $_SESSION['colorcito'] = "danger";            
+        }
+    }else {
         $_SESSION['mensaje'] = "DATOS ERRONEOS ";
         $_SESSION['colorcito'] = "danger";
     }

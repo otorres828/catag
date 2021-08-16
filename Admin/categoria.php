@@ -11,9 +11,17 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- <title>Catag - Nuevo producto</title>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    
+      
+ 
+ 
+    <title>Catag - Nuevo Categoria</title>
 </head>
 
 <body>
@@ -24,8 +32,7 @@
             <div class="col-md-4 mt-5">
                 <form action="../logica/savecategoria.php" method="POST">
                     <!-- Nombre -->
-
-                    <h4 class="mt-1"><strong>REGISTE NUEVA CATEGORIA</strong></h4>
+                    <h4 class="mt-1"><strong>REGISTRE NUEVA CATEGORIA</strong></h4>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input name="nombre_categoria" type="text" class="form-control" id="nombre_categoria" aria-describedby="nombre_categoria" placeholder="Escribe el nombre de la categoria" required>
@@ -34,22 +41,17 @@
                     <!-- Nueva Categoria -->
                     <button name="newCategoria" type="submit" class="btn btn-success mb-3 col-12">Nueva Categoria</button>
                 </form>
-
-
             </div>
-
             <!-- AQUI ESTA LA TABLA -->
             <div class="col-md-4 mt-5">
-
                 <?php if (isset($_SESSION['mensaje'])) { ?>
-                    <div class="alert alert-<?= $_SESSION['colorcito']; ?> alert-dismissible fade show" role="alert">
+                    <div class="alert alert-<?= $_SESSION['colorcito'];?> alert-dismissible fade show" role="alert">
                         <?php echo $_SESSION['mensaje']; ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <?php unset($_SESSION['mensaje']); ?>
                 <?php } ?>
                 <!-- TABLA Categoria -->
-                <form action="savecategoria.php" method="POST">
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -72,14 +74,14 @@
                             <?php } ?>
                         </tbody>
                     </table>
-                </form>
-
             </div>
-
-
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f0abf2240e.js" crossorigin="anonymous"></script>
+    <?php include '../cabeceras/footer.php';?>
+
+
 </body>
 
 </html>
