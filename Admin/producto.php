@@ -30,7 +30,7 @@
             <div class="col">
 
                 <?php if (isset($_SESSION['mensaje'])) :  ?>
-                    <div class="mt-3 alert alert-<?= $_SESSION['colorcito']; ?> alert-dismissible fade show" role="alert">
+                    <div class="mt-5 alert alert-<?= $_SESSION['colorcito']; ?> alert-dismissible fade show" role="alert">
                         <?php echo $_SESSION['mensaje']; ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
@@ -40,7 +40,7 @@
                 endif; ?>
 
                 <div class="col">
-                    <div class="mb-3 mt-4">
+                    <div class="mb-3 mt-5">
                         <label for="exampleInputEmail1" class="form-label">Link personalizado</label>
                         <input type="link" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="http://localhost/cat/Admin/tienda.php?username=<?=$p['username'];?>">
                         <div id="emailHelp" class="form-text">Comparte tu link</div>

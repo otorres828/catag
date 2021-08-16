@@ -70,7 +70,6 @@ if (isset($_POST['modProducto'])) {
     // ELIMINAR producto
 if(isset($_GET['idproducto'])){
     $idproducto=$_GET['idproducto'];
-
     $query2 = "SELECT * FROM products WHERE id='$idproducto'";
     $r=  $conn->query($query2);
     $fila =$r->fetch(PDO::FETCH_ASSOC);
@@ -89,7 +88,6 @@ if(isset($_GET['idproducto'])){
         $_SESSION['colorcito'] = "danger";
         header("Location: ../Admin/producto.php");
     }
-   
     if (!$r) {
         die("Error 1: Error de query ");
     }

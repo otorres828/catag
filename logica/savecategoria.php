@@ -51,15 +51,24 @@ if(isset($_GET['idcategoria'])){
     $idcategoria=$_GET['idcategoria'];
 
     $query = "DELETE FROM categoria WHERE idcategoria='$idcategoria'";
-    $query2 = "SELECT * FROM categoria WHERE idcategoria='$idcategoria'";
-
+    $query2="SELECT * FROM categoria WHERE idcategoria='$idcategoria'";
+    $query3= "SELECT * FROM products WHERE idcategoria='$idcategoria'";
+    $r3=  $conn->query($query3);
     $r=  $conn->query($query2);
+    $resultado = $conn->query($query);
+    
+
     $fila =$r->fetch(PDO::FETCH_ASSOC);
     $nombre=$fila['nombre'];
-    $resultado = $conn->query($query);
+    
+    while ($direccion = $r3->fetch(PDO::FETCH_ASSOC)) {   
+        unlink($direccion['image']);
+    } 
+
     if (!$resultado) {
         die("Error 1: Error de query ");
     } else {
+
         echo "Categoria eliminada<br>";
         session_start();
         $_SESSION['mensaje'] = "Categoria \" $nombre \" eliminada 😃";
