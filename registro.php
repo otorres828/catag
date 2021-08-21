@@ -139,6 +139,7 @@
     </div>
 
 
+    <?php include '../cabeceras/footer.php';?>
 
 </body>
 

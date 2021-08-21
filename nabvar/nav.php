@@ -96,7 +96,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="http://localhost/cat/Admin/tienda.php?username=<?=$user;?>">Tienda</a>
+                                <a class="nav-link" href="../Admin/tienda.php?username=<?=$user;?>">Tienda</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../Admin/producto.php">Productos</a>
